@@ -1,4 +1,4 @@
 export class Todo{
-  content: string | undefined;
-  completed: boolean | undefined;
+  content: string ='';
+  completed: boolean =false;
 }
