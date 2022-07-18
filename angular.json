@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-app": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "nl-BE": "src/locale/messages.nl.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,6 +19,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": [
+              "en-US",
+              "nl-BE"
+            ],
             "outputPath": "dist/my-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -92,7 +102,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/manifest.webmanifest",
               "src/manifest.webmanifest"
             ],
             "styles": [
